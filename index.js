@@ -15,16 +15,16 @@ hidden_elements.forEach((el) => observer.observe(el));
 // Select all navigation buttons
 const navButtons = document.querySelectorAll(".nav button");
 
-let homeOffset = 600;
-let aboutOffset = 1700;
-let skillsOffset = 2600;
-let projectsOffset = 4070;
-let contactOffset = 4077;
+let homeOffset = 670;
+let aboutOffset = 1500;
+let skillsOffset = 2200;
+let projectsOffset = 3600;
+let contactOffset = 4000;
 
 window.addEventListener("scroll", () => {
   // Get the current scroll position
   const scrollPosition = window.scrollY;
-
+  console.log(scrollPosition);
   const screen_width = window.innerWidth;
 
   if (screen_width <= 800) {
