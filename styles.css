@@ -266,6 +266,10 @@ body::-webkit-scrollbar {
   display: flex;
 }
 
+.logos::-webkit-scrollbar {
+  display: none;
+}
+
 .logo_box img {
   height: 110px;
   background: transparent;

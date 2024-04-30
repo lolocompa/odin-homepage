@@ -3,9 +3,8 @@ var typeWriterElement = document.getElementById("typewriter");
 
 // The TextArray:
 var textArray = [
-  "I'm a student",
-  "I'm learning Full-Stack Development.",
-  "The Odin Project is great.",
+  "I'm a Full-Stack Developer.",
+  "I live in rosario, Argentina.",
 ];
 
 // You can also do this by transfering it through a data-attribute

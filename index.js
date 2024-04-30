@@ -14,17 +14,17 @@ hidden_elements.forEach((el) => observer.observe(el));
 
 // Select all navigation buttons
 const navButtons = document.querySelectorAll(".nav button");
+const totalPageHeight = document.body.scrollHeight - window.innerHeight;
 
 let homeOffset = 670;
 let aboutOffset = 1500;
 let skillsOffset = 2200;
-let projectsOffset = 3600;
+let projectsOffset = totalPageHeight - 100;
 let contactOffset = 4000;
 
 window.addEventListener("scroll", () => {
   // Get the current scroll position
   const scrollPosition = window.scrollY;
-  console.log(scrollPosition);
   const screen_width = window.innerWidth;
 
   if (screen_width <= 800) {
@@ -65,7 +65,12 @@ const nav_divs = document.querySelectorAll(".nav_container");
 nav_divs.forEach((btn) => {
   btn.addEventListener("click", () => {
     const targetSectionClass = btn.dataset.scroll;
-    const position = parseInt(targetSectionClass);
+    let position;
+    if (targetSectionClass === "total") {
+      position = totalPageHeight;
+    } else {
+      position = parseInt(targetSectionClass);
+    }
 
     window.scrollTo({
       top: position,
