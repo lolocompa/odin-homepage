@@ -27,10 +27,7 @@ window.addEventListener("scroll", () => {
   const scrollPosition = window.scrollY;
   const screen_width = window.innerWidth;
 
-  if (screen_width <= 800) {
-    projectsOffset = 6710;
-    contactOffset = 6719;
-  }
+
 
   // Example logic to determine the current section based on scroll position
   let currentSection;
@@ -68,8 +65,10 @@ nav_divs.forEach((btn) => {
     let position;
     if (targetSectionClass === "total") {
       position = totalPageHeight;
+      console.log(position);
     } else {
       position = parseInt(targetSectionClass);
+      console.log(position);
     }
 
     window.scrollTo({
